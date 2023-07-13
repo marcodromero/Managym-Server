@@ -22,7 +22,7 @@ const connectAndPopulateDb = async () => {
 
     if (!users.length && !activities.length && !subscriptions.length) {
       // create some sample data for the database to work with in case it's empty
-      seedDb();
+      await seedDb();
     }
   } catch (error) {
     console.error(`Connecting and populating db error: ${error}`);
